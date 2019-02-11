@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul class="flash">
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
+<p>Upload an json file!</p>
+
+<form action="/" method="post" enctype="multipart/form-data">
+    <input type="file" name="qas" id="qas">
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

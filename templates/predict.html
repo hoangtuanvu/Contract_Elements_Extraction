@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block body %}
+<p>BERET QA System Result</p>
+
+    <div id="jsonFile">
+	<a href="{{json_url}}">JSON download</a>
+    </div>
+        <div class="img-preview">
+<!--
+            <div id="imagePreview">
+		<img src="{{image_url}}" alt="Input image">
+            </div>
+-->
+            <div id="imagePreview">
+		<img src="{{image_debug_url}}" alt="Debug image">
+            </div>
+        </div>
+
+<!--
+{{ plot_div|safe }}
+<script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.10.min.js"></script>
+<script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.10.min.js"></script>
+{{ plot_script|safe }}
+-->
+{% endblock %}
